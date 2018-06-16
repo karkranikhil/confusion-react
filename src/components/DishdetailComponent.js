@@ -27,21 +27,23 @@ class DishDetail extends Component {
     }
   render() {
     return (
-        <div className="row">
-            <div  className="col-12 col-md-5 m-1">
-                {this.renderDish(this.props.selectedDish)}
-            </div>
-            {this.props.selectedDish && this.props.selectedDish.comments && <div  className="col-12 col-md-5 m-1">
-                <h3>Comments</h3>
-                {this.props.selectedDish.comments .map((item)=>{
-                    return (
-                    <div key={item.id}>
-                        <p>{item.comment}</p>
-                        <p>---{item.author}, {item.date}</p>
-                    </div>
-                    )
-                })}
-            </div>}
+        <div className="container">
+            <div className="row">
+                <div  className="col-12 col-md-5 m-1">
+                    {this.renderDish(this.props.dish)}
+                </div>
+                {this.props.dish && this.props.dish.comments && <div  className="col-12 col-md-5 m-1">
+                    <h3>Comments</h3>
+                    {this.props.dish.comments .map((comment)=>{
+                        return (
+                            <ul className="list-unstyled" key={comment.id}>
+                                <li>{comment.comment}</li>
+                                <li>-- {comment.author}, {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}</li>
+                            </ul>
+                        )
+                    })}
+                </div>}
+        </div>
       </div>
     )
   }
