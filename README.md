@@ -1,3 +1,10 @@
+### Run the server using 
+
+json-server --watch db.json -d 2000 -p 3005
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
