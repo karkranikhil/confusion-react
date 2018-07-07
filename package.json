@@ -27,6 +27,7 @@
     "node": "8.7.0",
     "npm": "5.4.2"
   },
+  "proxy": "http://localhost:3005/",
   "scripts": {
     "start": "yarn jsonServer | yarn dev",
     "jsonServer": "json-server --watch db.json -d 2000 -p 3005",
