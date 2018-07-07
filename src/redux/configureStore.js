@@ -1,7 +1,7 @@
 
 import {createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-import { createForms, initialFieldState } from 'react-redux-form';
+import { createForms } from 'react-redux-form';
 import logger from 'redux-logger';
 import { Dishes } from './dishes';
 import { Promotions } from './promotions';

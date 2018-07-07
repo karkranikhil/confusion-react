@@ -6,6 +6,7 @@
     "bootstrap": "4.0.0",
     "bootstrap-social": "5.1.1",
     "cross-fetch": "^2.1.0",
+    "express": "^4.16.3",
     "font-awesome": "4.7.0",
     "prop-types": "15.6.0",
     "react": "^16.4.1",
@@ -22,8 +23,14 @@
     "redux-logger": "3.0.6",
     "redux-thunk": "2.2.0"
   },
+  "engines": {
+    "node": "8.7.0",
+    "npm": "5.4.2"
+  },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "yarn jsonServer | yarn dev",
+    "jsonServer": "json-server --watch db.json -d 2000 -p 3005",
+    "dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
