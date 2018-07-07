@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const port = process.env.PORT || 3005;
+const port = 3005;
 
 app.get('/dishes', (req, res) => {
   res.send([
