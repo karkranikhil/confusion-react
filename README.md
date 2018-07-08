@@ -7,7 +7,7 @@
 ### Output will Look like
 
 <h3>Home</h3>
-<img src='snapshot/Home.png'/>
+<img src='https://github.com/karkranikhil/confusion-react/blob/master/snapshots/Home.png'/>
   
   
 
